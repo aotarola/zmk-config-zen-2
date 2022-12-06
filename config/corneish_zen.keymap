@@ -10,6 +10,30 @@
 };
 
 / {
+
+        macros {
+          gui_and_space: gui_and_space {
+            label = "ZM_gui_and_space";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp SPACE>
+                , <&macro_release &kp LGUI>
+                ;
+          };
+        };
+
+        behaviors {
+          td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LGUI>, <&gui_and_space>;
+          };           
+        }
+
         keymap {
                 compatible = "zmk,keymap";
 
