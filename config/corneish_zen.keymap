@@ -21,6 +21,7 @@
             label = "ZM_gui_and_space";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            wait-ms = <10>;
             bindings
                 = <&macro_press &kp LGUI>
                 , <&macro_tap &kp SPACE>
