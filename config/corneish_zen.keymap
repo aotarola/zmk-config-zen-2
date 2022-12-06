@@ -32,7 +32,7 @@
             tapping-term-ms = <200>;
             bindings = <&kp LGUI>, <&gui_and_space>;
           };           
-        }
+        };
 
         keymap {
                 compatible = "zmk,keymap";
