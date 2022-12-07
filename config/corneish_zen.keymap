@@ -99,19 +99,18 @@
                 adjust_layer {
                         label = "ADJUST";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  COLEMAK  | QWERTY|
-// | ESC  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  =   |
+// | TAB       |  XXX  |  XXX    |  XXX  |  XXX  |  XXX   |   |  XXX  |  XXX   |  XXX  |  XXX  |  COLEMAK  | QWERTY |
+// | BTCLR     |  BT1  |  BT2    |  BT3  |  BT4  |  BT5   |   |  XXX  |  XXX   |  XXX  |  XXX  |  XXX      |  XXX   |
+// | SHFT      |  XXX  |  XXX    |  XXX  |  XXX  |  XXX   |   |  XXX  |  XXX   |  XXX  |  XXX  |  XXX      |  XXX   |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &to L_DEFAULT &to L_QWERTY
-   &kp ESC &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp EQUAL
+   &none       &none   &none     &none   &none   &none        &none    &none   &none   &none   &to L_DEFAULT &to L_QWERTY
+   &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &none &none &none &none &none &none
+   &none       &none   &none     &none   &none   &none        &none    &none   &none   &none   &none         &none
               &td0 &kp LSHIFT &lt L_NUMBER SPACE    &lt L_SYMBOL RET &mt RSHIFT BSPC &mt RALT DEL
                         >;
                 };
                                 
-                                                                
                 numpad_layer {
                         label = "NUMPAD";
 // -----------------------------------------------------------------------------------------
