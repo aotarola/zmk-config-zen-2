@@ -42,7 +42,7 @@
                 , <&macro_release &kp LCTRL>
                 , <&macro_release &kp LGUI>
                 ;
-		  }
+		  };
         };
 
         behaviors {
@@ -143,7 +143,6 @@
                         >;
                 };
                 
-        };
 				
                 adjust_layer {
                         label = "ADJUST";
@@ -159,4 +158,5 @@
               &td0 &kp LSHIFT &lt L_NUMBER SPACE    &lt L_SYMBOL RET &mt RSHIFT BSPC &mt RALT DEL
                         >;
                 };
+		};
 };
