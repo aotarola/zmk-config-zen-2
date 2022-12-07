@@ -30,19 +30,19 @@
                 ;
           };
 
-		  k_lock: k_lock {
-            label = "ZM_k_lock";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <1>;
-            bindings
+          k_lock: k_lock {
+           label = "ZM_k_lock";
+           compatible = "zmk,behavior-macro";
+           #binding-cells = <0>;
+           wait-ms = <1>;
+           bindings
                 = <&macro_press &kp LGUI>
-				, <&macro_press &kp LCTRL>
-				, <&macro_tap   &kp Q>
-				, <&macro_release &kp LCTRL>
-				, <&macro_release &kp LGUI>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap   &kp Q>
+                , <&macro_release &kp LCTRL>
+                , <&macro_release &kp LGUI>
                 ;
-		  };
+           };
         };
 
         behaviors {
