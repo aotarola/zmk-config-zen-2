@@ -6,7 +6,8 @@
 #define L_NUMBER 1
 #define L_SYMBOL 2
 #define L_ADJUST 3
-#define L_QWERTY 4
+#define L_NUMPAD 4
+#define L_QWERTY 5
 
 / {
   chosen {
@@ -56,12 +57,12 @@
 // -----------------------------------------------------------------------------------------
 // | TAB  |  Q  |  W  |  F  |  P  |  G  |   |  J  |  L   |  U  |  Y  |  ;  |  \   |
 // | ESC  |  A  |  R  |  S  |  T  |  D  |   |  H  |  N   |  E  |  I  |  O  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  |  =   |
+// | L_NUMPAD |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  |  =   |
 //                    | GUI | SHFT| SPC/NUMBER |   | ENT/SYMBOL | SHFT/BSPC | BKSP|
                         bindings = <
    &kp TAB   &kp Q &kp W &kp F &kp P &kp G   &kp J &kp L  &kp U  &kp Y  &kp SEMI    &kp BSLH
    &kp ESC   &kp A &kp R &kp S &kp T &kp D   &kp H &kp N  &kp E  &kp I  &kp O &kp SQT
-   &kp LSHFT &mt LCTRL Z &kp X &kp C &kp V   &kp B   &kp K &kp M  &kp COMMA &kp DOT &mt RCTRL FSLH &kp EQUAL
+   &mo L_NUMPAD &mt LCTRL Z &kp X &kp C &kp V   &kp B   &kp K &kp M  &kp COMMA &kp DOT &mt RCTRL FSLH &kp EQUAL
               &td0 &kp LSHIFT &lt L_NUMBER SPACE    &lt L_SYMBOL RET &mt RSHIFT BSPC &mt RALT DEL
                         >;
                 };
@@ -103,9 +104,25 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  =   |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &tog L_DEFAULT &tog L_QWERTY
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &to L_DEFAULT &to L_QWERTY
    &kp ESC &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp EQUAL
+              &td0 &kp LSHIFT &lt L_NUMBER SPACE    &lt L_SYMBOL RET &mt RSHIFT BSPC &mt RALT DEL
+                        >;
+                };
+                                
+                                                                
+                numpad_layer {
+                        label = "NUMPAD";
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  7   |  8  |  9  |  +  | BKSP |
+// | ESC  |  A  |  S  |  D  |  F  |  G  |   |  H  |  6   |  5  |  4  |  -  |  '   |
+// | L_NUMPAD |  Z  |  X  |  C  |  V  |  B  | 0  |  3  |  2   |  1  |  .  |  /  |  =   |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        bindings = <
+   &trans &trans &trans &trans &trans &trans &trans &kp 7  &kp 8  &kp 9   &kp PLUS  &trans
+   &trans &trans &trans &trans &trans &trans &trans &kp 6  &kp 5  &kp 4   &kp MINUS &trans
+   &trans &trans &trans &trans &trans &trans &kp 0  &kp 3  &kp 2  &kp 1   &trans    &trans
               &td0 &kp LSHIFT &lt L_NUMBER SPACE    &lt L_SYMBOL RET &mt RSHIFT BSPC &mt RALT DEL
                         >;
                 };
@@ -115,12 +132,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | ESC  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  =   |
+// | L_NUMPAD |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  =   |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp ESC &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp EQUAL
+   &mo L_NUMPAD &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp EQUAL
               &td0 &kp LSHIFT &lt L_NUMBER SPACE    &lt L_SYMBOL RET &mt RSHIFT BSPC &mt RALT DEL
                         >;
                 };
