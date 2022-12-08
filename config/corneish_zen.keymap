@@ -4,10 +4,11 @@
 
 #define L_DEFAULT 0 // COLEMAK is the default layout
 #define L_QWERTY 1
-#define L_NUMBER 2
-#define L_SYMBOL 3
-#define L_NUMPAD 4
-#define L_ADJUST 5
+#define L_KANA 2
+#define L_NUMBER 3
+#define L_SYMBOL 4
+#define L_NUMPAD 5
+#define L_ADJUST 6
 
 / {
   chosen {
@@ -43,6 +44,18 @@
                 , <&macro_release &kp LGUI>
                 ;
            };
+		
+		 hiragana: hiragana {
+		  label = "ZM_hiragana";
+		  compatible = "zmk,behavior-macro";
+		  wait-ms = <10>;
+		  bindings
+		        = <&tog L_KANA>
+				, <&macro_press &kp RCTRL>
+				, <&macro_tap   &kp SPACE>
+				, <&macro_release &kp RCTRL>
+				;
+		 }
         };
 
         behaviors {
@@ -84,6 +97,22 @@
 				
                 qwerty_layer {
                         label = "QWERTY";
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | \        |
+// | ESC  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '       |
+// | L_NUMPAD |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  =   |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        bindings = <
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
+   &kp ESC &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &mo L_NUMPAD &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp EQUAL
+              &td0 &kp LSHIFT &lt L_NUMBER SPACE    &lt L_SYMBOL RET &mt RSHIFT BSPC &mt RALT DEL
+                        >;
+                };
+				
+				
+                qwerty_layer {
+                        label = "KANA";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | \        |
 // | ESC  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '       |
@@ -147,14 +176,14 @@
                 adjust_layer {
                         label = "ADJUST";
 // -----------------------------------------------------------------------------------------
-// | TAB       |  XXX  |  XXX    |  XXX  |  XXX  |  XXX   |   |  XXX  |  XXX   |  XXX  |  XXX  |  COLEMAK  | QWERTY |
-// | BTCLR     |  BT1  |  BT2    |  BT3  |  BT4  |  BT5   |   |  XXX  |  XXX   |  XXX  |  XXX  |  XXX      |  XXX   |
-// | SHFT      |  XXX  |  XXX    |  XXX  |  XXX  |  XXX   |   |  XXX  |  XXX   |  XXX  |  XXX  |  XXX      |  XXX   |
+// | TAB       |  XXX  |  XXX    |  XXX  |  XXX  |  XXX   |   |  XXX  |  XXX   |  XXX  |  HIRAGANA|  COLEMAK  | QWERTY |
+// | BTCLR     |  BT1  |  BT2    |  BT3  |  BT4  |  BT5   |   |  XXX  |  XXX   |  XXX  |  XXX     |  XXX      |  XXX   |
+// | SHFT      |  XXX  |  XXX    |  XXX  |  XXX  |  XXX   |   |  XXX  |  XXX   |  XXX  |  XXX     |  XXX      |  XXX   |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &none       &none   &none     &none   &none   &none        &none    &none   &none   &none   &to L_DEFAULT &to L_QWERTY
+   &none       &none   &none     &none   &none   &none        &none    &none   &none      &hiragana   &to L_DEFAULT &to L_QWERTY
    &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &none &none &none &none &none &none
-   &none       &none   &none     &none   &none   &none        &none    &none   &none   &none   &none         &none
+   &none       &none   &none     &none   &none   &none        &none    &none   &none      &none   &none         &none
               &td0 &kp LSHIFT &lt L_NUMBER SPACE    &lt L_SYMBOL RET &mt RSHIFT BSPC &mt RALT DEL
                         >;
                 };
