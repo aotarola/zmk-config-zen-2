@@ -44,19 +44,18 @@
                 , <&macro_release &kp LGUI>
                 ;
            };
-		
-		 hiragana: hiragana {
-		  label = "ZM_hiragana";
-		  compatible = "zmk,behavior-macro";
-          #binding-cells = <0>;
-		  wait-ms = <10>;
-		  bindings
-		        = <&tog L_KANA>
-				, <&macro_press &kp RCTRL>
-				, <&macro_tap   &kp SPACE>
-				, <&macro_release &kp RCTRL>
-				;
-		 };
+          hiragana: hiragana {
+           label = "ZM_hiragana";
+           compatible = "zmk,behavior-macro";
+           #binding-cells = <0>;
+           wait-ms = <10>;
+           bindings
+                = <&tog L_KANA>
+                , <&macro_press &kp RCTRL>
+                , <&macro_tap   &kp SPACE>
+                , <&macro_release &kp RCTRL>
+                ;
+           };
         };
 
         behaviors {
