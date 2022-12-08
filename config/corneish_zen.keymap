@@ -55,7 +55,7 @@
 				, <&macro_tap   &kp SPACE>
 				, <&macro_release &kp RCTRL>
 				;
-		 }
+		 };
         };
 
         behaviors {
