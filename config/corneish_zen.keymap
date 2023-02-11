@@ -42,6 +42,7 @@
 				, <&macro_tap &kp GRAVE>
 				, <&macro_release &kp SPACE>
 				, <&macro_release &kp LGUI>
+				;
 		  };
 
           k_lock: k_lock {
