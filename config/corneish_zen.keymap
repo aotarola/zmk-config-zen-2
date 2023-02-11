@@ -31,17 +31,17 @@
                 ;
           };
 
-		  easy_window_cycle: easy_window_cycle {
-		    label = "ZM_easy_window_cycle";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <1>;
-			bindings 
-			    = <&macro_press &kp LGUI >
-				, <&macro_tap &kp GRAVE>
-				, <&macro_release &kp LGUI>
-				;
-		  };
+          easy_window_cycle: easy_window_cycle {
+           label = "ZM_easy_window_cycle";
+           compatible = "zmk,behavior-macro";
+           #binding-cells = <0>;
+           wait-ms = <1>;
+           bindings 
+                = <&macro_press &kp LGUI >
+                , <&macro_tap &kp GRAVE>
+                , <&macro_release &kp LGUI>
+                ;
+           };
 
           k_lock: k_lock {
            label = "ZM_k_lock";
