@@ -196,11 +196,11 @@
                         label = "ADJUST";
                         bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        &none         &none        &none         &none          &none        &none             &none         &none          &none       &hiragana   &to L_DEFAULT  &to L_QWERTY
+        &none         &none        &none         &none          &none        &none             &none          &none        &none       &hiragana   &to L_DEFAULT  &to L_QWERTY
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-      &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_SEL 5    &none          &none         &none         &none         &none
+      &bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_SEL 5     &none        &none          &none         &none         &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        &none           &none        &none          &none        &none        &none             &none         &none        &none          &none         &none         &none
+        &none         &none        &none         &none          &none        &none             &none          &none        &none          &none         &none         &none
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
                                                 GUI_SPACE    &kp LSHIFT     NUMBER_SPC        SYMBOL_RET   RSHIFT_BSPC     ALT_DEL
 //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
