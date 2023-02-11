@@ -1,0 +1,122 @@
+layers:
+  COLEMAK:
+  - [TAB, Q, W, F, P, G, J, L, U, Y]
+  - [;, \, ESC, A, R, S, T, D, H, N]
+  - - E
+    - I
+    - O
+    - ''''
+    - NUMPAD
+    - {t: Z, h: LCTRL}
+    - X
+    - C
+    - V
+    - B
+  - - K
+    - M
+    - ','
+    - .
+    - {t: /, h: RCTRL}
+    - '='
+    - '&gui_space'
+    - LSHIFT
+    - {t: SPACE, h: NUMBER}
+    - {t: RET, h: SYMBOL}
+  - - {t: BSPC, h: RSHIFT}
+    - {t: DEL, h: RALT}
+  QWERTY:
+  - [TAB, Q, W, E, R, T, Y, U, I, O]
+  - [P, \, ESC, A, S, D, F, G, H, J]
+  - [K, L, ;, '''', NUMPAD, Z, X, C, V, B]
+  - - N
+    - M
+    - ','
+    - .
+    - /
+    - '='
+    - '&gui_space'
+    - LSHIFT
+    - {t: SPACE, h: NUMBER}
+    - {t: RET, h: SYMBOL}
+  - - {t: BSPC, h: RSHIFT}
+    - {t: DEL, h: RALT}
+  KANA:
+  - [TAB, Q, W, E, R, T, Y, U, I, O]
+  - [P, \, ESC, A, S, D, F, G, H, J]
+  - [K, L, ;, '''', NUMPAD, Z, X, C, V, B]
+  - - N
+    - M
+    - ','
+    - .
+    - /
+    - '='
+    - '&gui_space'
+    - LSHIFT
+    - {t: SPACE, h: NUMBER}
+    - {t: RET, h: SYMBOL}
+  - - {t: BSPC, h: RSHIFT}
+    - {t: DEL, h: RALT}
+  NUMBER:
+  - ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+  - ['0', '-', '~', '!', '@', '#', $, '%', ^, '&']
+  - ['*', (, ), _, VOL DN, BRI DEC, BRI INC, F12, '', '&win_cycle']
+  - - ''
+    - MUTE
+    - PP
+    - PREV
+    - NEXT
+    - VOL UP
+    - '&gui_space'
+    - LSHIFT
+    - {t: SPACE, h: NUMBER}
+    - {t: RET, h: SYMBOL}
+  - - {t: BSPC, h: RSHIFT}
+    - {t: DEL, h: RALT}
+  SYMBOL:
+  - [F7, F8, F9, '{', '}', '', PG UP, HOME, UP, END]
+  - ['', '', F4, F5, F6, (, ), '|', PG DN, LEFT]
+  - [DOWN, RIGHT, '&k_lock', '', F1, F2, F3, '[', ']', '']
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - '&gui_space'
+    - LSHIFT
+    - {t: SPACE, h: NUMBER}
+    - {t: RET, h: SYMBOL}
+  - - {t: BSPC, h: RSHIFT}
+    - {t: DEL, h: RALT}
+  NUMPAD:
+  - ['', '', '', '', '', '', '', '7', '8', '9']
+  - [+, '', '', '', '', '', '', '', '', '4']
+  - ['5', '6', '-', '', '', '', '', '', '', '']
+  - - '0'
+    - '1'
+    - '2'
+    - '3'
+    - ''
+    - ''
+    - '&gui_space'
+    - LSHIFT
+    - {t: SPACE, h: NUMBER}
+    - {t: RET, h: SYMBOL}
+  - - {t: BSPC, h: RSHIFT}
+    - {t: DEL, h: RALT}
+  ADJUST:
+  - ['', '', '', '', '', '', '', '', '', '&hiragana']
+  - [COLEMAK, QWERTY, BT CLR, BT 0, BT 1, BT 2, BT 3, BT 4, BT 5, '']
+  - ['', '', '', '', '', '', '', '', '', '']
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - '&gui_space'
+    - LSHIFT
+    - {t: SPACE, h: NUMBER}
+    - {t: RET, h: SYMBOL}
+  - - {t: BSPC, h: RSHIFT}
+    - {t: DEL, h: RALT}
