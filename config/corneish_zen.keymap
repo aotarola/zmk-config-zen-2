@@ -10,6 +10,11 @@
 #define L_NUMPAD 5
 #define L_ADJUST 6
 
+#define NUMBER_SPC &lt L_NUMBER SPACE
+#define SYMBOL_RET &lt L_SYMBOL RET
+#define SHIFT_BSPC &mt RSHIFT BSPC
+#define ALT_DEL &mt RALT DEL
+
 / {
   chosen {
     zmk,matrix_transform = &default_transform;
