@@ -38,9 +38,7 @@
 			wait-ms = <1>;
 			bindings 
 			    = <&macro_press &kp LGUI >
-				, <&macro_press &kp SPACE>
 				, <&macro_tap &kp GRAVE>
-				, <&macro_release &kp SPACE>
 				, <&macro_release &kp LGUI>
 				;
 		  };
